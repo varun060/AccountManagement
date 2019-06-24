@@ -1,8 +1,8 @@
 This project is done for demonstrating skills in Java,Springboot,MySQL and JPA .
 
 Project is to get 
-1) all Account details stored in database 
-2) transactions related to a particular account stored database
+1) All Account details stored in database 
+2) Transactions related to a particular account stored database
 
 Project is having Application layer and Database Layer
 
@@ -23,13 +23,22 @@ Application layer can be scaled using Springboot Micro service arch.. like Eurek
 Application Design
 ------------------
 MVC architecture is followed to meet the goal.
-Controller will get requests from UI/Browser/CURL and after initial validation, it sends requests to service layer.
+Controller(REST API) will get requests from UI/Browser/CURL and after initial validation, it sends requests to service layer.
 Service layer gets data from DAO repository layer and applies business logic to form expected results.
 Repository gets details from DB using JPA and returns objects mapped to relational database tables.
 Accounts and Transactions are having separate repositories for handling DB interaction
 ORM models are also defined to map tables with objects.
 
+Applicaiton Testing
+-------------------
 
+Applicaiton uses springboot testing framework which is similar to JUnit to ensure code stability after code change
+It checks json received from REST API
+
+Enhancements
+------------------
+Move it to proper Micro service architecture by using service registry,gateways, Load Balancers
+integrate docker for containerization
 
 
 
