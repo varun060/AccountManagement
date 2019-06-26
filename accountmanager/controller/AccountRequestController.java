@@ -66,7 +66,7 @@ public class AccountRequestController {
 	 * @return
 	 */
 	@RequestMapping("/trans/{accId}")
-	public List<Transaction> getAllCommentsByPostId(@PathVariable (value = "accId") String accId,
+	public List<Transaction> getAllTransactionsByAccId(@PathVariable (value = "accId") String accId,
 			Pageable pageable) {
 
 		logger.info("getting all transactions of "+accId); 
